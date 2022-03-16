@@ -1,6 +1,5 @@
 package hello.servlet.web.servlet;
 
-import com.fasterxml.jackson.databind.deser.UnresolvedId;
 import hello.servlet.domain.member.MemberRepository;
 
 import javax.servlet.ServletException;
