@@ -347,3 +347,42 @@ HTML을 편리하게 생성하는 뷰 기능
 ## Chapter 2. 서블릿
 
 ### 01. 프로젝트 생성
+
+
+
+
+
+## Chapter3. Spring FrameWork
+
+### 1. Controller
+
+```java
+@Controller 
+public class SpringMemberFormControllerV1 {
+
+    @RequestMapping("/springmvc/v1/members/new-form")
+    public ModelAndView process(){
+        return new ModelAndView("new-form");
+
+    }
+}
+```
+
+`@Controller` :
+
+* 스프링이 자동으로 SpringBean으로 등록한다. (Component 스캔의 대상이 된다.)
+
+* 스프링 MVC에서 애노테이션 기반 컨트롤러로 인식한다. (requestMapping, handlerMapping에 사용)
+
+`@RequestMapping` : 
+
+* 요청 정보를 매핑한다. 해당 URL이 호출되면 이 메서드가 호출된다. 매서드 이름은 상관없음
+
+`@ModelAndView` :
+
+* 모델과 뷰 정보를 담아서 반환하면 된다.
+
+
+
+`@Controller`  또는 `@RequestMapping`이 클래스 레벨에 있으면 꺼낼 수 있는 대상이 된다.
+
